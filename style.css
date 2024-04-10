@@ -77,12 +77,11 @@
     position: absolute;
     inset: 0;
     background: repeating-conic-gradient(from var(--a),
-        #0F0,
-        #FF0,
-        #0FF,
-        #F0F,
-        #0FF
-    );
+            #0F0,
+            #FF0,
+            #0FF,
+            #F0F,
+            #0FF);
     border-radius: 20px;
     animation: rotate 6s linear infinite;
 }
@@ -92,17 +91,17 @@
     position: absolute;
     inset: 0;
     background: repeating-conic-gradient(from var(--a),
-        #0F0,
-        #FF0,
-        #0FF,
-        #F0F,
-        #0FF
-    );
+            #0F0,
+            #FF0,
+            #0FF,
+            #F0F,
+            #0FF);
     border-radius: 20px;
     animation: rotate 4s linear infinite;
     filter: blur(40px);
     opacity: 0.75;
 }
+
 .box style {
     position: absolute;
     inset: 4px;
@@ -126,7 +125,31 @@
     0% {
         --a: 0;
     }
+
     0% {
         --a: -360deg;
+    }
+}
+
+@media screen and (max-width: 768px) {
+/* MAX WIDTH = TELA MENORES QUE ALGUMA RESOLUÇÃO */
+    
+    .box {
+        height: 30vh;
+        width: 420px;
+    }
+
+    .clock span {
+        font-size: 40px;
+        width: 80px;
+    }
+
+    .clock span::after {
+        font-size: 12px;
+        bottom: -15px;
+    }
+
+    .box style {
+        font-size: 16px;
     }
 }
